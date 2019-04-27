@@ -16,4 +16,8 @@ dependencies {
     // https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito
     testCompile group: 'org.powermock', name: 'powermock-api-mockito', version: '1.7.4'
     testCompile "org.powermock:powermock-module-junit4:1.6.4"
+    implementation 'junit:junit:4.12'
+    implementation 'org.testng:testng:6.9.6'
+    implementation 'junit:junit:4.12'
+    implementation 'org.testng:testng:6.9.6'
 }

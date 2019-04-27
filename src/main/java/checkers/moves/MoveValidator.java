@@ -1,10 +1,13 @@
 package checkers.moves;
 
-import checkers.board.*;
-import checkers.figures.*;
+import checkers.board.Board;
+import checkers.figures.Figure;
+import checkers.figures.None;
+import checkers.figures.Pawn;
+import checkers.figures.Queen;
 import checkers.gameplay.RulesSet;
-import com.sun.javafx.css.Rule;
-import exceptions.*;
+import exceptions.CaptureException;
+import exceptions.IncorrectMoveException;
 
 public class MoveValidator {
 

@@ -38,80 +38,111 @@ public class InGameUI implements Serializable {
 
     public String sideMenuSimple(int line,List<String> moves){
         String s = "            ";
+        String returnedValue = "";
         switch(line){
             case 1:
-                return "\t\t+------+------+-------+";
+                returnedValue = "\t\t+------+------+-------+";
+                break;
             case 2:
-                return "\t\t| MEN  | KING |       |";
+                returnedValue = "\t\t| MEN  | KING |       |";
+                break;
             case 3:
-                return "\t\t+------+------+-------+";
+                returnedValue = "\t\t+------+------+-------+";
+                break;
             case 4:
-                return "\t|  PP  |  QQ  |       |";
+                returnedValue = "\t|  PP  |  QQ  |       |";
+                break;
             case 5:
-                return "\t\t|  PP  |  QQ  | BLACK |";
+                returnedValue = "\t\t|  PP  |  QQ  | BLACK |";
+                break;
             case 6:
-                return "\t\t+------+------+-------+";
+                returnedValue = "\t\t+------+------+-------+";
+                break;
             case 7:
-                return "\t|  pp  |  qq  |       |";
+                returnedValue = "\t|  pp  |  qq  |       |";
+                break;
             case 8:
-                return "\t\t|  pp  |  qq  | WHITE |";
+                returnedValue = "\t\t|  pp  |  qq  | WHITE |";
+                break;
             case 9:
-                return "\t\t+------+------+-------+";
+                returnedValue = "\t\t+------+------+-------+";
+                break;
             case 10:
-                return "\t|   MENU              |";
+                returnedValue = "\t|   MENU              |";
+                break;
             case 11:
-                return "\t\t|(h) moves history    |";
+                returnedValue = "\t\t|(h) moves history    |";
+                break;
             case 12:
-                return "\t\t|(s) save and exit    |";
+                returnedValue = "\t\t|(s) save and exit    |";
+                break;
             case 13:
-                return "\t|(x) exit, no saving  |";
+                returnedValue = "\t|(x) exit, no saving  |";
+                break;
             case 14:
-                return "\t\t+---------------------+";
+                returnedValue = "\t\t+---------------------+";
+                break;
             case 15:
-                return "\t\t|   LAST 10 MOVES     |";
+                returnedValue = "\t\t|   LAST 10 MOVES     |";
+                break;
             case 16:
-                if(moves.size() >= 1)
+                if(moves.size() >= 1) {
                     s = moves.get(moves.size() - 1);
-                return "\t|    " + s + "     |";
+                    returnedValue = "\t|    " + s + "     |";
+                }
+                break;
             case 17:
-                if(moves.size() >= 2)
+                if(moves.size() >= 2) {
                     s = moves.get(moves.size() - 2);
-                return "\t\t|    " + s + "     |";
+                    returnedValue = "\t\t|    " + s + "     |";
+                }
+                break;
             case 18:
-                if(moves.size() >= 3)
+                if(moves.size() >= 3) {
                     s = moves.get(moves.size() - 3);
-                return "\t\t|    " + s + "     |";
+                    returnedValue = "\t\t|    " + s + "     |";
+                }
+                break;
             case 19:
                 if(moves.size() >= 4)
                     s = moves.get(moves.size() - 4);
-                return "\t|    " + s + "     |";
+                returnedValue = "\t|    " + s + "     |";
+                break;
             case 20:
                 if(moves.size() >= 5)
                     s = moves.get(moves.size() - 5);
-                return "\t\t|    " + s + "     |";
+                returnedValue = "\t\t|    " + s + "     |";
+                break;
             case 21:
                 if(moves.size() >= 6)
                     s = moves.get(moves.size() - 6);
-                return "\t\t|    " + s + "     |";
+                returnedValue = "\t\t|    " + s + "     |";
+                break;
             case 22:
                 if(moves.size() >= 7)
                     s = moves.get(moves.size() - 7);
-                return "\t|    " + s + "     |";
+                returnedValue = "\t|    " + s + "     |";
+                break;
             case 23:
                 if(moves.size() >= 8)
                     s = moves.get(moves.size() - 8);
-                return "\t\t|    " + s + "     |";
+                returnedValue = "\t\t|    " + s + "     |";
+                break;
             case 24:
                 if(moves.size() >= 9)
                     s = moves.get(moves.size() - 9);
-                return "\t\t|    " + s + "     |";
+                returnedValue = "\t\t|    " + s + "     |";
+                break;
             case 25:
                 if(moves.size() >= 10)
                     s = moves.get(moves.size() - 10);
-                return "\t|    " + s + "     |";
+                returnedValue = "\t|    " + s + "     |";
+                break;
             default:
-                return "\t\t+---------------------+";
+                returnedValue = "\t\t+---------------------+";
+                break;
         }
+        return returnedValue;
     }
 
     public String sideMenu(int line,List<String> moves, boolean player){
